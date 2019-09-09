@@ -22,9 +22,11 @@ from pyhplib import *
 # this prints some system information, to be printed by the bootrom at power-on
 def get_bootrom_info(devices, nCpus, cpuFreq, timeBaseFreq, periphFreq, dtsPath, timeStamp):
 
-    piton_ver  = subprocess.check_output(["git log | grep commit -m1 | awk -e '{print $2;}'"], shell=True)
-    ariane_ver = subprocess.check_output(["cd  %s && git log | grep commit -m1 | awk -e '{print $2;}'" % dtsPath], shell=True)
-
+    #piton_ver  = subprocess.check_output(["git log | grep commit -m1 | awk -e '{print $2;}'"], shell=True)
+    #ariane_ver = subprocess.check_output(["cd  %s && git log | grep commit -m1 | awk -e '{print $2;}'" % dtsPath], shell=True)
+    #modified by shayan
+    piton_ver='64672e3db50931354ad98e4f813d14425e8a1679'
+    ariane_ver='e873743b547fbf39bd08f25a0bfa7db38eb61794'
     # get length of memory
     memLen  = 0
     for i in range(len(devices)):

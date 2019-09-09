@@ -117,13 +117,14 @@ if  {[info exists ::env(PITON_ARIANE)]} {
   cd $::env(ARIANE_ROOT)/openpiton/bootrom/baremetal
   # Note: dd dumps info to stderr that we do not want to interpret
   # otherwise this command fails...
-  exec make clean 2> /dev/null
-  exec make all 2> /dev/null
+#modified by shayan
+  #exec make clean 2> /dev/null
+  #exec make all 2> /dev/null
   cd $::env(ARIANE_ROOT)/openpiton/bootrom/linux
   # Note: dd dumps info to stderr that we do not want to interpret
   # otherwise this command fails...
-  exec make clean 2> /dev/null
-  exec make all MAX_HARTS=$::env(PTON_NUM_TILES) UART_FREQ=$::env(CONFIG_SYS_FREQ) 2> /dev/null
+  #exec make clean 2> /dev/null
+  #exec make all MAX_HARTS=$::env(PTON_NUM_TILES) UART_FREQ=$::env(CONFIG_SYS_FREQ) 2> /dev/null
   puts "INFO: done"
   # two targets per hart (M,S) and two interrupt sources (UART, Ethernet)
   set NUM_TARGETS [expr 2*$::env(PTON_NUM_TILES)]

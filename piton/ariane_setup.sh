@@ -74,8 +74,9 @@ export PITON_ROOT=`pwd`
 ## GCC and RISCV GCC setup
 export CXX=g++-7 CC=gcc-7
 # customize this to a fast local disk
-export RISCV=/scratch/$USER/riscv_install
-export VERILATOR_ROOT=$TOP/verilator-4.014/
+#modified by Shayan
+export RISCV=/opt/riscv
+export VERILATOR_ROOT=/home/vlsi_lab/verilator_env/verilator-4.006
 
 # setup paths
 export PATH=$RISCV/bin:$VERILATOR_ROOT/bin:$PATH

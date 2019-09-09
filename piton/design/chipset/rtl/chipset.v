@@ -770,6 +770,7 @@ end
     assign chipset_clk = passthru_chipset_clk;
 `else
     `ifdef PITON_CHIPSET_CLKS_GEN
+
         clk_mmcm    clk_mmcm    (
 
         `ifdef PITON_CHIPSET_DIFF_CLK
